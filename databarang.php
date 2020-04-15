@@ -5,10 +5,6 @@ $sql = "SELECT max(kode_produk) as maxKode FROM data_barang";
 $hasil = mysqli_query($koneksi, $sql);
 $data = mysqli_fetch_array($hasil);
 
-$nilaikode = substr($data[0], 3);
-$kode = (int) $nilaikode;
-$kode = $kode + 1;
-
 if ($data) {
     $nilaikode = substr($data[0], 3);
     $kode = (int) $nilaikode;
@@ -29,7 +25,7 @@ if ($data) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Tambah Barang</title>
+    <title>Inventory Barang</title>
 </head>
 
 <body>
